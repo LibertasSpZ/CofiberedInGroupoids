@@ -2,7 +2,7 @@ import Mathlib.CategoryTheory.Functor.Category
 import Mathlib.CategoryTheory.Opposites
 import Mathlib.CategoryTheory.CommSq
 import Mathlib.CategoryTheory.Sites.Grothendieck
-import LS.FiberedCategories
+import LS.FiberedCategories.FiberedCat
 
 
 universe u₁ v₁ u₂ v₂ u₃ w
