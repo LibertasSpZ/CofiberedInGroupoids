@@ -1,4 +1,6 @@
-import LS.Deprecated.FiberedInGroupoids
+import LS.FiberedInGroupoids.FiberedInGroupoids
+import LS.FiberedCategories.FiberedCat
+import LS.FiberedCategories.Basic
 
 open CategoryTheory Functor Opposite
 
@@ -18,7 +20,7 @@ class IsCofiberedInGroupoids (p : C ⥤ S) : Prop where
 
 
 
-lemma IsCofiberedInGroupoidsOpp (p : C ⥤ S) (hp : IsCofiberedInGroupoids p) :
+/- lemma IsCofiberedInGroupoidsOpp (p : C ⥤ S) (hp : IsCofiberedInGroupoids p) :
   IsFiberedInGroupoids p.op :=
 by
   rcases hp with ⟨hlift, hcart⟩
@@ -64,3 +66,4 @@ by
 lemma IsCoiberedInGroupoids.id : IsCofiberedInGroupoids (Functor.id Sᵒᵖ) :=
 by simpa [show Functor.id Sᵒᵖ = (Functor.id S).op from rfl, ←IsFiberedInGroupoids_iff_Op]
   using IsFiberedInGroupoids.id
+-/

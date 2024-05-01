@@ -5,6 +5,7 @@ Authors: Paul Lezeau, Calle Sönne
 -/
 
 import LS.FiberedCategories.Basic
+import LS.FiberedCategories.HomLift
 
 open CategoryTheory Functor Category
 
@@ -51,7 +52,7 @@ noncomputable instance IsFiberedInGroupoids.id : IsFiberedInGroupoids (𝟭 𝒮
     existsi g
     simp only
     nth_rw 1 [show g = (𝟭 𝒮).map g by rfl]
-    refine ⟨⟨IsHomLift_self (𝟭 𝒮) g, ?_⟩, ?_⟩
+    refine ⟨⟨IsHomLift.self (𝟭 𝒮) g, ?_⟩, ?_⟩
     · have h₁ := hφ.3.1
       have h₂ := hφ.2
       have h₃ := hφ'.3.1
